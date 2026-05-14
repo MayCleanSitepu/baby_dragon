@@ -1,0 +1,19 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.baby_dragon": {
+      "geometry": "geometry.default",
+      "materials": [{ "*": "material.default" }],
+      "textures": ["array.skins[query.skin_id]"],
+      "arrays": {
+        "textures": {
+          "array.skins": [
+            "texture.default",
+            "texture.wood",
+            "texture.ender"
+          ]
+        }
+      }
+    }
+  }
+}

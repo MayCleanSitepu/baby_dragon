@@ -1,0 +1,18 @@
+﻿{
+  "format_version": 2,
+  "header": {
+    "name": "Baby Dragon RP",
+    "description": "Baby Dragon Resource Pack",
+    "uuid": "722e42d3-6420-4a50-bcf9-c3c4d702e2e4",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "description": "Baby Dragon RP",
+      "type": "resources",
+      "uuid": "9609839d-8b4b-4de9-be06-cb0ac7c880dc",
+      "version": [1, 0, 0]
+    }
+  ]
+}

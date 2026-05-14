@@ -1,0 +1,41 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "baby_dragon.idle": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.4, "pitch": 1.6 }
+      ]
+    },
+    "baby_dragon.hurt": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.7, "pitch": 1.5 }
+      ]
+    },
+    "baby_dragon.death": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.8, "pitch": 1.4 }
+      ]
+    },
+    "baby_dragon.shoot": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.8, "pitch": 1.3 }
+      ]
+    },
+    "baby_dragon.flap": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.5, "pitch": 1.6 }
+      ]
+    },
+    "baby_dragon.charge": {
+      "category": "neutral",
+      "sounds": [
+        { "name": "sounds/test", "volume": 0.35, "pitch": 0.75 }
+      ]
+    }
+  }
+}

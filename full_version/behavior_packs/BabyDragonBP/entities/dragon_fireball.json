@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "baby_dragon:dragon_fireball",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 8,
+            "knockback": true,
+            "destroy_on_hit": true,
+            "semi_random_diff_damage": false
+          },
+          "remove_on_hit": {},
+          "particle_on_hit": {
+            "particle_type": "baby_dragon:dragon_fire_impact",
+            "num_particles": 15,
+            "on_entity_hit": true,
+            "on_other_hit": true
+          }
+        },
+        "power": 1.6,
+        "gravity": 0.0,
+        "should_bounce": false,
+        "inertia": 1.0,
+        "offset": [0, 0.5, 0],
+        "on_fire_time": 5
+      },
+      "minecraft:physics": { "has_gravity": false },
+      "minecraft:collision_box": { "width": 0.5, "height": 0.5 },
+      "minecraft:fire_immune": {}
+    }
+  }
+}

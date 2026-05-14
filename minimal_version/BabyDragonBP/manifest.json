@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Minimal Baby Dragon BP",
+    "description": "Minimal version for testing",
+    "uuid": "517073f1-718f-44b2-b6ce-33a6add9d378",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "description": "Minimal Baby Dragon BP",
+      "type": "data",
+      "uuid": "fcfd9feb-08c0-41c6-b332-5acd8ebbf804",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "722e42d3-6420-4a50-bcf9-c3c4d702e2e4",
+      "version": [1, 0, 0]
+    }
+  ]
+}

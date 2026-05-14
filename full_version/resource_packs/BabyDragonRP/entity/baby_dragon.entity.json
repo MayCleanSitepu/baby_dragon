@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dragon:baby_dragon",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { 
+        "default": "textures/entity/pet_baby_dragon_cut",
+        "wood": "textures/entity/pet_baby_dragon_wood_cut",
+        "ender": "textures/entity/pet_baby_dragon_ender_cut"
+      },
+      "geometry": { "default": "geometry.hp3_bp.pet_baby_dragon" },
+      "particle_effects": {
+        "tame": "minecraft:basic_flame_particle",
+        "fire_launch": "baby_dragon:dragon_fire_impact",
+        "fire_charge": "baby_dragon:dragon_fire_charge"
+      },
+      "animations": {
+        "idle": "animation.hp3_bp.pet_baby_dragon.idle",
+        "walk": "animation.hp3_bp.pet_baby_dragon.move",
+        "sit": "animation.hp3_bp.pet_baby_dragon.sit",
+        "tamed": "animation.hp3_bp.pet_baby_dragon.tamed",
+        "attack": "animation.hp3_bp.pet_baby_dragon.attack",
+        "special": "animation.hp3_bp.pet_baby_dragon.special_attack",
+        "death": "animation.hp3_bp.pet_baby_dragon.death",
+        "controller": "controller.animation.baby_dragon.general"
+      },
+      "scripts": {
+        "animate": ["controller"]
+      },
+      "render_controllers": ["controller.render.baby_dragon"],
+      "spawn_egg": { "base_color": "#FF6600", "overlay_color": "#8B0000" }
+    }
+  }
+}

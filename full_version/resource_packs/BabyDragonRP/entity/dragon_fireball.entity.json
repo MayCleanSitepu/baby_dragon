@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "baby_dragon:dragon_fireball",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/dragon_fireball" },
+      "geometry": { "default": "geometry.baby_dragon.fireball" },
+      "particle_effects": {
+        "trail": "baby_dragon:dragon_fireball_trail"
+      },
+      "scripts": {
+        "animate": [{ "trail": "1.0" }]
+      },
+      "render_controllers": ["controller.render.dragon_fireball"]
+    }
+  }
+}

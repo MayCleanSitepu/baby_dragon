@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dragon:baby_dragon",
+      "textures": { "default": "textures/entity/pet_baby_dragon_cut" },
+       "materials": { "default": "entity_alphatest" },
+      "geometry": { "default": "geometry.hp3_bp.pet_baby_dragon" },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": { "base_color": "#FF6600", "overlay_color": "#8B0000" }
+    }
+  }
+}

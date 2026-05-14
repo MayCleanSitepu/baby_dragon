@@ -1,0 +1,55 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.baby_dragon.general": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": ["idle"],
+          "transitions": [
+            { "attack": "query.is_delayed_attacking" },
+            { "death": "query.variant == 99" },
+            { "special": "query.variant == 2" },
+            { "attack": "query.variant == 1" },
+            { "tamed": "query.variant == 3" },
+            { "sit": "query.variant == 10" },
+            { "move": "query.ground_speed > 0.1" }
+          ]
+        },
+        "move": {
+          "animations": ["walk"],
+          "transitions": [
+            { "default": "query.ground_speed <= 0.1 || query.variant != 0" }
+          ]
+        },
+        "sit": {
+          "animations": ["sit"],
+          "transitions": [
+            { "default": "query.variant != 10" }
+          ]
+        },
+        "attack": {
+          "animations": ["attack"],
+          "transitions": [
+            { "default": "!query.is_delayed_attacking && query.variant != 1" }
+          ]
+        },
+        "special": {
+          "animations": ["special"],
+          "transitions": [
+            { "default": "query.variant != 2 && !query.is_delayed_attacking" }
+          ]
+        },
+        "tamed": {
+          "animations": ["tamed"],
+          "transitions": [
+            { "default": "query.variant != 3" }
+          ]
+        },
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}
