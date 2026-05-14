@@ -370,7 +370,7 @@
 			},
 			"sound_effects": {
 				"0.1": {
-					"effect": "mob.ghast.fireball"
+					"effect": "attack"
 				}
 			},
 			"particle_effects": {
@@ -522,13 +522,13 @@
 			},
 			"sound_effects": {
 				"0.0": {
-					"effect": "mob.enderdragon.flap"
+					"effect": "flap"
 				},
 				"0.5": {
-					"effect": "mob.enderdragon.growl"
+					"effect": "charge"
 				},
 				"1.5": {
-					"effect": "mob.ghast.fireball"
+					"effect": "attack"
 				}
 			},
 			"particle_effects": {
@@ -546,7 +546,7 @@
 		"animation.hp3_bp.pet_baby_dragon.death": {
 			"animation_length": 3.5,
 			"sound_effects": {
-				"0.0": { "effect": "mob.enderdragon.death" }
+				"0.0": { "effect": "death" }
 			},
 			"bones": {
 				"body": {

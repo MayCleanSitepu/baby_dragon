@@ -13,8 +13,11 @@
           "impact_damage": {
             "damage": 8,
             "knockback": true,
-            "destroy_on_hit": true,
             "semi_random_diff_damage": false
+          },
+          "ignite": {
+            "fire_time": 8,
+            "affected_by_griefing": false
           },
           "remove_on_hit": {},
           "particle_on_hit": {
@@ -24,12 +27,11 @@
             "on_other_hit": true
           }
         },
-        "power": 1.6,
+        "power": 0.9,
         "gravity": 0.0,
         "should_bounce": false,
         "inertia": 1.0,
-        "offset": [0, 0.5, 0],
-        "on_fire_time": 5
+        "offset": [0, 0.5, 0]
       },
       "minecraft:physics": { "has_gravity": false },
       "minecraft:collision_box": { "width": 0.5, "height": 0.5 },

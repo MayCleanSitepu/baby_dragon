@@ -1,0 +1,13 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "dragon:baby_dragon": {
+        "events": {
+          "ambient": { "sound": "mob.enderdragon.growl", "volume": 0.4, "pitch": 1.6 },
+          "hurt":    { "sound": "mob.enderdragon.hurt",  "volume": 0.7, "pitch": 1.5 },
+          "death":   { "sound": "mob.enderdragon.death", "volume": 0.8, "pitch": 1.4 }
+        }
+      }
+    }
+  }
+}

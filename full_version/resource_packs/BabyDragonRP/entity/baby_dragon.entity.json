@@ -15,6 +15,12 @@
         "fire_launch": "baby_dragon:dragon_fire_impact",
         "fire_charge": "baby_dragon:dragon_fire_charge"
       },
+      "sound_effects": {
+        "attack": "baby_dragon.attack",
+        "flap":   "baby_dragon.flap",
+        "charge": "baby_dragon.charge",
+        "death":  "baby_dragon.death"
+      },
       "animations": {
         "idle": "animation.hp3_bp.pet_baby_dragon.idle",
         "walk": "animation.hp3_bp.pet_baby_dragon.move",
