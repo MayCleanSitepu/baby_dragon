@@ -375,7 +375,8 @@
 			},
 			"particle_effects": {
 				"0.2": {
-					"effect": "fire_launch"
+					"effect": "fire_launch",
+					"locator": "firebreath"
 				}
 			}
 		},
@@ -532,15 +533,15 @@
 				}
 			},
 			"particle_effects": {
-				"0.5":  { "effect": "fire_charge" },
-				"0.75": { "effect": "fire_charge" },
-				"1.0":  { "effect": "fire_charge" },
-				"1.25": { "effect": "fire_charge" },
-				"1.5":  { "effect": "fire_launch" },
-				"1.75": { "effect": "fire_launch" },
-				"2.0":  { "effect": "fire_launch" },
-				"2.25": { "effect": "fire_launch" },
-				"2.5":  { "effect": "fire_launch" }
+				"0.5":  { "effect": "fire_charge", "locator": "firebreath" },
+				"0.75": { "effect": "fire_charge", "locator": "firebreath" },
+				"1.0":  { "effect": "fire_charge", "locator": "firebreath" },
+				"1.25": { "effect": "fire_charge", "locator": "firebreath" },
+				"1.5":  { "effect": "fire_launch", "locator": "firebreath" },
+				"1.75": { "effect": "fire_launch", "locator": "firebreath" },
+				"2.0":  { "effect": "fire_launch", "locator": "firebreath" },
+				"2.25": { "effect": "fire_launch", "locator": "firebreath" },
+				"2.5":  { "effect": "fire_launch", "locator": "firebreath" }
 			}
 		},
 		"animation.hp3_bp.pet_baby_dragon.death": {

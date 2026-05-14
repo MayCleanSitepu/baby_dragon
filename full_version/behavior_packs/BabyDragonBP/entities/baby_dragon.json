@@ -27,9 +27,6 @@
       "dragon:color_0": { "minecraft:skin_id": { "value": 0 } },
       "dragon:color_1": { "minecraft:skin_id": { "value": 1 } },
       "dragon:color_2": { "minecraft:skin_id": { "value": 2 } },
-      "dragon:mark_0": { "minecraft:is_dyeable": { "interact_text": "" } },
-      "dragon:mark_1": { "minecraft:is_dyeable": { "interact_text": "" } },
-      "dragon:mark_2": { "minecraft:is_dyeable": { "interact_text": "" } },
       "dragon:sitting": {
         "minecraft:is_sitting": {},
         "minecraft:variant": { "value": 10 },
@@ -74,7 +71,7 @@
       "minecraft:physics": {},
       "minecraft:collision_box": { "width": 1, "height": 1 },
       "minecraft:health": { "value": 20, "max": 20 },
-      "minecraft:loot": { "table": "loot_tables/empty.json" },
+      "minecraft:loot": { "table": "loot_tables/entities/baby_dragon.json" },
       "minecraft:damage_sensor": {
         "triggers": [
           {
@@ -164,7 +161,7 @@
           {
             "on_interact": {
               "filters": { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "minecraft:apple" },
-              "event": "dragon:start_attack"
+              "event": "dragon:test_attack"
             },
             "play_sounds": "mob.enderdragon.growl",
             "interact_text": "Test Attack"
@@ -172,7 +169,7 @@
           {
             "on_interact": {
               "filters": { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "minecraft:glass_bottle" },
-              "event": "dragon:start_special_attack"
+              "event": "dragon:test_special"
             },
             "play_sounds": "mob.enderdragon.death",
             "interact_text": "Test Special"
@@ -206,8 +203,10 @@
     },
     "events": {
       "dragon:on_tame": {
-        "add": { "component_groups": ["dragon:tamed", "dragon:just_tamed"] },
-        "remove": { "component_groups": ["dragon:normal"] }
+        "sequence": [
+          { "add": { "component_groups": ["dragon:tamed", "dragon:just_tamed"] }, "remove": { "component_groups": ["dragon:normal"] } },
+          { "queue_command": { "command": "title @p actionbar §6✦ Dragon Tamed! §c❤" } }
+        ]
       },
       "dragon:start_attack": {
         "add": { "component_groups": ["dragon:attacking"] },
@@ -222,35 +221,46 @@
         "remove": { "component_groups": ["dragon:attacking", "dragon:special_attacking", "dragon:just_tamed"] }
       },
       "dragon:sit": {
-        "add": { "component_groups": ["dragon:sitting"] },
-        "remove": { "component_groups": ["dragon:normal"] }
+        "sequence": [
+          { "add": { "component_groups": ["dragon:sitting"] }, "remove": { "component_groups": ["dragon:normal"] } },
+          { "queue_command": { "command": "title @p actionbar §7Dragon is now Sitting..." } }
+        ]
       },
       "dragon:stand": {
-        "add": { "component_groups": ["dragon:normal"] },
-        "remove": { "component_groups": ["dragon:sitting"] }
+        "sequence": [
+          { "add": { "component_groups": ["dragon:normal"] }, "remove": { "component_groups": ["dragon:sitting"] } },
+          { "queue_command": { "command": "title @p actionbar §aDragon is now Standing!" } }
+        ]
       },
       "dragon:start_death": {
-        "add": { "component_groups": ["dragon:dying"] },
-        "remove": { "component_groups": ["dragon:normal", "dragon:attacking", "dragon:special_attacking", "dragon:sitting", "dragon:just_tamed"] }
+        "sequence": [
+          { "add": { "component_groups": ["dragon:dying"] }, "remove": { "component_groups": ["dragon:normal", "dragon:attacking", "dragon:special_attacking", "dragon:sitting", "dragon:just_tamed"] } },
+          { "queue_command": { "command": "title @p actionbar §4Dragon has Fallen..." } }
+        ]
+      },
+      "dragon:test_attack": {
+        "sequence": [
+          { "add": { "component_groups": ["dragon:attacking"] }, "remove": { "component_groups": ["dragon:normal", "dragon:special_attacking", "dragon:just_tamed"] } },
+          { "queue_command": { "command": "title @p actionbar §cDragon Attack Mode!" } }
+        ]
+      },
+      "dragon:test_special": {
+        "sequence": [
+          { "add": { "component_groups": ["dragon:special_attacking"] }, "remove": { "component_groups": ["dragon:normal", "dragon:attacking", "dragon:just_tamed"] } },
+          { "queue_command": { "command": "title @p actionbar §4Dragon Special Attack!" } }
+        ]
       },
       "dragon:do_nothing": {},
       "dragon:cycle_color": {
-        "randomize": [
+        "sequence": [
           {
-            "weight": 1,
-            "add": { "component_groups": ["dragon:color_0"] },
-            "remove": { "component_groups": ["dragon:color_1", "dragon:color_2"] }
+            "randomize": [
+              { "weight": 1, "add": { "component_groups": ["dragon:color_0"] }, "remove": { "component_groups": ["dragon:color_1", "dragon:color_2"] } },
+              { "weight": 1, "add": { "component_groups": ["dragon:color_1"] }, "remove": { "component_groups": ["dragon:color_0", "dragon:color_2"] } },
+              { "weight": 1, "add": { "component_groups": ["dragon:color_2"] }, "remove": { "component_groups": ["dragon:color_0", "dragon:color_1"] } }
+            ]
           },
-          {
-            "weight": 1,
-            "add": { "component_groups": ["dragon:color_1"] },
-            "remove": { "component_groups": ["dragon:color_0", "dragon:color_2"] }
-          },
-          {
-            "weight": 1,
-            "add": { "component_groups": ["dragon:color_2"] },
-            "remove": { "component_groups": ["dragon:color_0", "dragon:color_1"] }
-          }
+          { "queue_command": { "command": "title @p actionbar §bColor Changed!" } }
         ]
       },
       "dragon:despawn": {
