@@ -19,7 +19,9 @@
         "attack": "baby_dragon.attack",
         "flap":   "baby_dragon.flap",
         "charge": "baby_dragon.charge",
-        "death":  "baby_dragon.death"
+        "death":  "baby_dragon.death",
+        "idle":   "baby_dragon.idle",
+        "tame":   "baby_dragon.tame"
       },
       "animations": {
         "idle": "animation.hp3_bp.pet_baby_dragon.idle",

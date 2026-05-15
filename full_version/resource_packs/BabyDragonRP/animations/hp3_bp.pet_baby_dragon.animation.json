@@ -257,7 +257,6 @@
 			}
 		},
 		"animation.hp3_bp.pet_baby_dragon.attack": {
-			"loop": true,
 			"animation_length": 0.8,
 			"bones": {
 				"neck": {
