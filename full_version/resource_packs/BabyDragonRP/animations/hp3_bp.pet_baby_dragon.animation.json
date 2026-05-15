@@ -1,5 +1,5 @@
 {
-	"format_version": "1.8.0",
+	"format_version": "1.10.0",
 	"animations": {
 		"animation.hp3_bp.pet_baby_dragon.idle": {
 			"loop": true,
@@ -259,6 +259,18 @@
 		"animation.hp3_bp.pet_baby_dragon.attack": {
 			"animation_length": 0.8,
 			"bones": {
+				"right_wing": {
+					"rotation": [0, 0, "-30+math.sin(query.anim_time*360*3)*25"]
+				},
+				"right_wing_2": {
+					"rotation": [0, 0, "math.sin(query.anim_time*360*3-90)*50"]
+				},
+				"left_wing": {
+					"rotation": [0, 0, "30+math.sin(query.anim_time*360*3)*-25"]
+				},
+				"left_wing_2": {
+					"rotation": [0, 0, "-(math.sin(query.anim_time*360*3-90)*50)"]
+				},
 				"neck": {
 					"rotation": {
 						"0.0": {
@@ -382,6 +394,18 @@
 		"animation.hp3_bp.pet_baby_dragon.special_attack": {
 			"animation_length": 3.125,
 			"bones": {
+				"right_wing": {
+					"rotation": [0, 0, "-30+math.sin(query.anim_time*360*3)*25"]
+				},
+				"right_wing_2": {
+					"rotation": [0, 0, "math.sin(query.anim_time*360*3-90)*50"]
+				},
+				"left_wing": {
+					"rotation": [0, 0, "30+math.sin(query.anim_time*360*3)*-25"]
+				},
+				"left_wing_2": {
+					"rotation": [0, 0, "-(math.sin(query.anim_time*360*3-90)*50)"]
+				},
 				"neck": {
 					"rotation": {
 						"0.0": {
@@ -544,6 +568,7 @@
 			}
 		},
 		"animation.hp3_bp.pet_baby_dragon.death": {
+			"loop": "hold_on_last_frame",
 			"animation_length": 3.5,
 			"sound_effects": {
 				"0.0": { "effect": "death" }

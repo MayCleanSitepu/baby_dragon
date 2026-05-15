@@ -1,0 +1,6 @@
+Untuk men-kill (menghapus) semua Baby Dragon, ketik ini di chat Minecraft:
+
+/kill @e[type=dragon:baby_dragon]
+
+Atau untuk jarak dekat (10 block):
+/kill @e[type=dragon:baby_dragon,r=10]

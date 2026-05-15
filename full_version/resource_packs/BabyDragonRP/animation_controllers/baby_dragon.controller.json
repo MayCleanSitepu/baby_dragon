@@ -5,49 +5,89 @@
       "initial_state": "default",
       "states": {
         "default": {
-          "animations": ["idle"],
+          "animations": [
+            "idle"
+          ],
           "transitions": [
-            { "attack": "query.is_delayed_attacking" },
-            { "death": "query.variant == 99" },
-            { "special": "query.variant == 2" },
-            { "attack": "query.variant == 1" },
-            { "tamed": "query.variant == 3" },
-            { "sit": "query.variant == 10" },
-            { "move": "query.ground_speed > 0.1" }
-          ]
+            {
+              "attack": "query.is_delayed_attacking"
+            },
+            {
+              "death": "query.variant == 99"
+            },
+            {
+              "special": "query.variant == 2"
+            },
+            {
+              "attack": "query.variant == 1"
+            },
+            {
+              "tamed": "query.variant == 3"
+            },
+            {
+              "sit": "query.variant == 10"
+            },
+            {
+              "move": "query.ground_speed > 0.1"
+            }
+          ],
+          "blend_transition": 0.2
         },
         "move": {
-          "animations": ["walk"],
+          "animations": [
+            "walk"
+          ],
           "transitions": [
-            { "default": "query.ground_speed <= 0.1 || query.variant != 0" }
-          ]
+            {
+              "default": "query.ground_speed <= 0.1 || query.variant != 0"
+            }
+          ],
+          "blend_transition": 0.2
         },
         "sit": {
-          "animations": ["sit"],
+          "animations": [
+            "sit"
+          ],
           "transitions": [
-            { "default": "query.variant != 10" }
+            {
+              "default": "query.variant != 10"
+            }
           ]
         },
         "attack": {
-          "animations": ["attack"],
+          "animations": [
+            "attack"
+          ],
           "transitions": [
-            { "default": "!query.is_delayed_attacking && query.variant != 1" }
+            {
+              "default": "!query.is_delayed_attacking && query.variant != 1"
+            }
           ]
         },
         "special": {
-          "animations": ["special"],
+          "animations": [
+            "special"
+          ],
           "transitions": [
-            { "default": "query.variant != 2 && !query.is_delayed_attacking" }
+            {
+              "default": "query.variant != 2 && !query.is_delayed_attacking"
+            }
           ]
         },
         "tamed": {
-          "animations": ["tamed"],
+          "animations": [
+            "tamed"
+          ],
           "transitions": [
-            { "default": "query.variant != 3" }
+            {
+              "default": "query.variant != 3"
+            }
           ]
         },
         "death": {
-          "animations": ["death"]
+          "animations": [
+            "death"
+          ]
         }
       }
     }

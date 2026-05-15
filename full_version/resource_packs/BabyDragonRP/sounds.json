@@ -2,12 +2,18 @@
   "entity_sounds": {
     "entities": {
       "dragon:baby_dragon": {
-        "volume": 1.0,
-        "pitch": 1.0,
         "events": {
-          "ambient": { "sound": "baby_dragon.idle",  "volume": 0.5, "pitch": 1.0 },
-          "hurt":    { "sound": "baby_dragon.hurt",  "volume": 0.8, "pitch": 1.1 },
-          "death":   { "sound": "baby_dragon.death", "volume": 1.0, "pitch": 0.85 }
+          "ambient": {
+            "sound": "baby_dragon.idle"
+          },
+          "hurt": {
+            "sound": "mob.enderdragon.hurt",
+            "volume": 0.7,
+            "pitch": 1.5
+          },
+          "death": {
+            "sound": "baby_dragon.death"
+          }
         }
       }
     }
