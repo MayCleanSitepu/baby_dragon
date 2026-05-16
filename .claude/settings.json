@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Copy-Item \"t:\\\\Dev\\\\Baby Dragon\\\\baby_dragon_sample\\\\full_version\\\\behavior_packs\\\\BabyDragonBP\\\\entities\\\\baby_dragon.json\" \"C:\\\\Users\\\\My Computer\\\\AppData\\\\Roaming\\\\Minecraft Bedrock\\\\Users\\\\Shared\\\\games\\\\com.mojang\\\\development_behavior_packs\\\\My_BEHAVIOR_Pack\\\\entities\\\\baby_dragon.json\" -Force)"
+      "PowerShell(Copy-Item \"t:\\\\Dev\\\\Baby Dragon\\\\baby_dragon_sample\\\\full_version\\\\behavior_packs\\\\BabyDragonBP\\\\entities\\\\baby_dragon.json\" \"C:\\\\Users\\\\My Computer\\\\AppData\\\\Roaming\\\\Minecraft Bedrock\\\\Users\\\\Shared\\\\games\\\\com.mojang\\\\development_behavior_packs\\\\My_BEHAVIOR_Pack\\\\entities\\\\baby_dragon.json\" -Force)",
+      "PowerShell($files = Get-ChildItem \"t:\\\\Dev\\\\Baby Dragon\\\\baby_dragon\\\\full_version\\\\resource_packs\\\\BabyDragonRP\\\\sounds\\\\baby_dragon\"; foreach \\($f in $files\\) { Write-Host \"$\\($f.Name\\): $\\($f.Length\\) bytes\" })"
     ],
     "additionalDirectories": [
       "C:\\Users\\My Computer\\AppData\\Roaming\\Minecraft Bedrock\\Users\\Shared\\games\\com.mojang\\development_behavior_packs\\My_BEHAVIOR_Pack\\entities",

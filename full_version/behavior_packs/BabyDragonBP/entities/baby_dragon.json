@@ -130,18 +130,19 @@
       "minecraft:damage_sensor": {
         "triggers": [
           {
-            "cause": "all",
-            "deals_damage": false,
             "on_damage": {
               "filters": {
                 "test": "has_damage",
                 "value": "fatal"
               },
               "event": "dragon:start_death"
-            }
+            },
+            "deals_damage": false
           },
           {
-            "cause": "all",
+            "on_damage": {
+              "event": "dragon:on_hurt"
+            },
             "deals_damage": true
           }
         ]
@@ -156,11 +157,6 @@
       "minecraft:on_target_escape": {
         "event": "dragon:stop_attack",
         "target": "self"
-      },
-      "minecraft:ambient_sound_interval": {
-        "value": 4.0,
-        "range": 8.0,
-        "event_name": "ambient"
       },
       "minecraft:attack": {
         "damage": 5
@@ -373,6 +369,11 @@
           }
         ]
       },
+      "dragon:on_hurt": {
+        "queue_command": {
+          "command": "execute as @s at @s run playsound baby_dragon.hurt @a[r=30]"
+        }
+      },
       "dragon:start_attack": {
         "add": {
           "component_groups": [
@@ -477,6 +478,11 @@
                 "dragon:just_tamed",
                 "dragon:tamed_following"
               ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": "execute as @s at @s run playsound baby_dragon.hurt @a[r=10]"
             }
           },
           {

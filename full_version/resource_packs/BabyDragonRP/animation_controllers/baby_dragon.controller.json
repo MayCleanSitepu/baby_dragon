@@ -90,6 +90,30 @@
           ]
         }
       }
+    },
+    "controller.animation.baby_dragon.hurt_sfx": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "transitions": [
+            {
+              "hurt": "query.is_hurt"
+            }
+          ]
+        },
+        "hurt": {
+          "sound_effects": [
+            {
+              "effect": "hurt"
+            }
+          ],
+          "transitions": [
+            {
+              "idle": "!query.is_hurt"
+            }
+          ]
+        }
+      }
     }
   }
 }

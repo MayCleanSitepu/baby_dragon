@@ -21,7 +21,8 @@
         "charge": "baby_dragon.charge",
         "death":  "baby_dragon.death",
         "idle":   "baby_dragon.idle",
-        "tame":   "baby_dragon.tame"
+        "tame":   "baby_dragon.tame",
+        "hurt":   "baby_dragon.hurt"
       },
       "animations": {
         "idle": "animation.hp3_bp.pet_baby_dragon.idle",
@@ -31,10 +32,11 @@
         "attack": "animation.hp3_bp.pet_baby_dragon.attack",
         "special": "animation.hp3_bp.pet_baby_dragon.special_attack",
         "death": "animation.hp3_bp.pet_baby_dragon.death",
-        "controller": "controller.animation.baby_dragon.general"
+        "controller": "controller.animation.baby_dragon.general",
+        "hurt_sfx": "controller.animation.baby_dragon.hurt_sfx"
       },
       "scripts": {
-        "animate": ["controller"]
+        "animate": ["controller", "hurt_sfx"]
       },
       "render_controllers": ["controller.render.baby_dragon"],
       "spawn_egg": { "base_color": "#FF6600", "overlay_color": "#8B0000" }

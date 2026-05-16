@@ -7,9 +7,7 @@
             "sound": "baby_dragon.idle"
           },
           "hurt": {
-            "sound": "mob.enderdragon.hurt",
-            "volume": 0.7,
-            "pitch": 1.5
+            "sound": "baby_dragon.hurt"
           },
           "death": {
             "sound": "baby_dragon.death"
