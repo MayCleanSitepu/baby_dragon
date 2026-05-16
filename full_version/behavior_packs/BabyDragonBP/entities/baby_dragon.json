@@ -49,6 +49,21 @@
         "minecraft:is_sitting": {},
         "minecraft:variant": {
           "value": 10
+        },
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:knockback_resistance": {
+          "value": 1.0
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 6,
+          "speed_multiplier": 0
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 7,
+          "speed_multiplier": 0,
+          "items": []
         }
       },
       "dragon:dying": {
