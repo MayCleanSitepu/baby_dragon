@@ -17,30 +17,18 @@ A custom Baby Dragon mob addon for Minecraft Bedrock Edition. The dragon spawns 
 - Use **Stick** to toggle sit/stand
 
 ### Color Variants
+- random color spawn
 - 3 skin variants: Default, Wood, Ender
 - Use **Feather** to cycle colors randomly
 
 ### Combat
-- Automatically targets and attacks nearby monsters within 35 blocks
-- Shoots custom fireballs every 2-4 seconds
+- Automatically targets and attacks nearby piglin
+- Shoots custom fireballs to piglin
 - Fireball deals 8 damage + knockback on hit
-- Fireball has flame particle effect while flying
 
 ### Animations
 - Idle, Walk, Sit, Attack, Special Attack, Tamed celebration, Death
 - All animations have matching sound effects
-
-### Sound Effects
-- Ambient growl (periodic)
-- Attack fire sound
-- Special attack charge + flap sounds
-- Death roar
-- Hurt sound on taking damage
-
-### Particles
-- Fire charge glow during special attack charge-up
-- Fire impact burst on fireball hit
-- Particles emit from snout locator (mouth position)
 
 ### UI Notifications (actionbar)
 - Dragon Tamed
@@ -49,9 +37,6 @@ A custom Baby Dragon mob addon for Minecraft Bedrock Edition. The dragon spawns 
 - Dragon Attack Mode (manual test)
 - Dragon Special Attack (manual test)
 - Dragon has Fallen (on death)
-
-### Loot
-- Drops Dragon Breath and Fire Charges on death
 
 ---
 
@@ -116,8 +101,6 @@ full_version/
 ## Known Limitations
 
 - Fireball does not set hit targets on fire (Bedrock `ignite` on_hit limitation)
-- `test.ogg` is a placeholder -- replace with proper sound files per event in `sound_definitions.json`
-- Sound files must be `.ogg` format (Vorbis)
 
 ---
 
@@ -125,17 +108,8 @@ full_version/
 
 To replace placeholder sounds, add `.ogg` files to `RP/sounds/` and update `sound_definitions.json`:
 
-```json
-"baby_dragon.attack": {
-    "category": "neutral",
-    "sounds": [{ "name": "sounds/your_attack_sound", "volume": 0.8, "pitch": 1.3 }]
-}
-```
 
-Events: `baby_dragon.idle`, `baby_dragon.attack`, `baby_dragon.charge`, `baby_dragon.flap`, `baby_dragon.death`
-
----
 
 ## Bedrock Version
 
-Built and tested on Bedrock 1.20+. Minimum engine version: 1.20.0.
+Built and tested on Minecraft Bedrock V26.21
