@@ -101,6 +101,18 @@
           "value": 1
         }
       },
+      "dragon:test_attacking": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 1.0,
+          "looping": false,
+          "time_down_event": {
+            "event": "dragon:stop_attack"
+          }
+        }
+      },
       "dragon:special_attacking": {
         "minecraft:variant": {
           "value": 2
@@ -423,6 +435,7 @@
         "remove": {
           "component_groups": [
             "dragon:attacking",
+            "dragon:test_attacking",
             "dragon:special_attacking",
             "dragon:just_tamed"
           ]
@@ -508,12 +521,13 @@
           {
             "add": {
               "component_groups": [
-                "dragon:attacking"
+                "dragon:test_attacking"
               ]
             },
             "remove": {
               "component_groups": [
                 "dragon:normal",
+                "dragon:attacking",
                 "dragon:special_attacking",
                 "dragon:just_tamed"
               ]
