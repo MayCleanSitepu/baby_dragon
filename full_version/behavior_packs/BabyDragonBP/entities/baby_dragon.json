@@ -11,11 +11,16 @@
         "minecraft:is_tamed": {}
       },
       "dragon:tamed_following": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
         "minecraft:behavior.follow_owner": {
           "priority": 2,
           "speed_multiplier": 1.5,
-          "start_distance": 5,
-          "stop_distance": 2
+          "start_distance": 3,
+          "stop_distance": 1,
+          "can_teleport": false,
+          "max_distance": 60
         }
       },
       "dragon:just_tamed": {
@@ -55,15 +60,6 @@
         },
         "minecraft:knockback_resistance": {
           "value": 1.0
-        },
-        "minecraft:behavior.random_stroll": {
-          "priority": 6,
-          "speed_multiplier": 0
-        },
-        "minecraft:behavior.tempt": {
-          "priority": 7,
-          "speed_multiplier": 0,
-          "items": []
         }
       },
       "dragon:dying": {
@@ -186,7 +182,7 @@
             "filters": {
               "test": "is_family",
               "subject": "other",
-              "value": "monster"
+              "value": "piglin"
             },
             "max_dist": 35
           }
